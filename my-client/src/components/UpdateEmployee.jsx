@@ -24,7 +24,7 @@ export function UpdateEmployee(){
 
     return(
         <div className="container-update">
-            <h2 className="form-title">Update Record Screen</h2>
+            <h1 className="form-title">Update Record Screen</h1>
             <hr/>
             <form onSubmit={updateHandler}>
                 <input type="text" placeholder="Enter Id"   value={id}      onChange={e => setId(e.target.value)}   required/><br/><br/>
