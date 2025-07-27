@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express= require('express');
 const mongoose= require('mongoose');
-const port= process.env.PORT || 3001;
+const port= 'https://utosh-employee-management.onrender.com';
 const app= express();
 const cors=require('cors')
 
