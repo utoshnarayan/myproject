@@ -1,13 +1,14 @@
 /* Main container */
 .form-container {
   max-width: 1000px;
-  margin: 0px auto;
-  padding: 2rem;
+  margin: 0 auto;                
+  padding: 1rem 1rem 2rem 1rem;  
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  align-items: center;         
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
+
 
 /* Title */
 .form-title {
