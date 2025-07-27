@@ -1,0 +1,136 @@
+/* Update.css */
+
+.container-update {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+}
+
+.container-update h2 {
+  color: #3a4a6d;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.container-update h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.container-update hr {
+  width: 100%;
+  max-width: 500px;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e0e5ec, transparent);
+  margin: 1.5rem 0;
+}
+
+.container-update form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-update form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.container-update input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 1rem;
+  border: 2px solid #e0e5ec;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container-update input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.container-update input::placeholder {
+  color: #a8b2c9;
+}
+
+.container-update button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container-update button:hover {
+  background: linear-gradient(to right, #5a6fd1, #6a3d9a);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+}
+
+.container-update button:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-update {
+    padding: 1.5rem;
+  }
+  
+  .container-update h2 {
+    font-size: 1.8rem;
+  }
+  
+  .container-update form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-update {
+    padding: 1rem;
+  }
+  
+  .container-update h2 {
+    font-size: 1.5rem;
+  }
+  
+  .container-update form {
+    padding: 1.5rem;
+  }
+  
+  .container-update input,
+  .container-update button {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,108 @@
+/* Employee.css */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.form-box {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form-title {
+  color: #2c3e50;
+  margin: 0;
+  margin-top: 40px;
+  
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-inputs {
+  background: white;
+  padding: 2rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-inputs input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-inputs input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-inputs input::placeholder {
+  color: #95a5a6;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.message-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+.message-card {
+  padding: 12px 15px;
+  background-color: #fff3f3;
+  border-left: 3px solid #e74c3c;
+  border-radius: 4px;
+  color: #e74c3c;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .form-box, .form-inputs {
+    padding: 1.5rem;
+  }
+  
+  .form-title {
+    font-size: 1.3rem;
+  }
+}
