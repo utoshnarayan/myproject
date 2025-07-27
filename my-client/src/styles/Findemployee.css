@@ -1,19 +1,19 @@
-/* Findmployee.css */
-
+/* Main container */
 .form-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
+/* Title */
 .form-title {
   text-align: center;
-  margin-top: -158px;
   color: #3a4a6d;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 600;
@@ -33,6 +33,7 @@
   border-radius: 2px;
 }
 
+/* Form styling */
 form {
   text-align: center;
   margin-bottom: 2rem;
@@ -57,6 +58,7 @@ form button:hover {
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
 }
 
+/* Table styling */
 .employee-table {
   background: white;
   border-radius: 15px;
@@ -103,6 +105,7 @@ td {
   color: #4a5568;
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -114,7 +117,7 @@ td {
   }
 }
 
-/* Loading state */
+/* Empty table state */
 .employee-table.empty {
   display: flex;
   justify-content: center;
@@ -124,35 +127,63 @@ td {
   font-style: italic;
 }
 
-/* Responsive adjustments */
+/* ---------- Responsive Design ---------- */
+
+/* Tablets */
 @media (max-width: 768px) {
   .form-container {
     padding: 1rem;
   }
-  
-  th, td {
+
+  .form-title {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  th,
+  td {
     padding: 10px 8px;
     font-size: 0.9rem;
   }
-  
-  .form-title {
-    font-size: 1.5rem;
+
+  form button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
+  .form-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .form-title {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .employee-table {
     border-radius: 10px;
+    overflow-x: auto;
   }
-  
+
   table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
   }
-  
+
+  th,
+  td {
+    font-size: 0.85rem;
+    padding: 8px 6px;
+  }
+
   form button {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
+    font-size: 0.95rem;
   }
 }
