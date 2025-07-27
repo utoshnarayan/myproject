@@ -14,10 +14,8 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Removed position: sticky/fixed entirely */
 }
 
 /* NavLink styling */
@@ -43,8 +41,8 @@ nav a:hover {
 
 /* App styling */
 .App {
-  padding-top: 1rem;
   font-family: 'Segoe UI', sans-serif;
+  /* Removed padding-top since nav is in normal flow */
 }
 
 /* ---------- Mobile Navigation Cards ---------- */
