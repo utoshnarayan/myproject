@@ -1,73 +1,95 @@
-import { useState } from "react";
-import "../styles/Employee.css";
-import axios from "axios";
+/* Employee.css */
 
-export function Employee() {
-  const [employeeNo, setEmployeeNo] = useState("");
-  const [employeeName, setEmployeeName] = useState("");
-  const [employeeSalary, setEmployeeSalary] = useState("");
-  const [message, setMessage] = useState("");
-  
-  
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 20px 20px 20px; /* 5px top margin */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  async function addHandler(e) {
-    e.preventDefault();
-    if (!employeeNo || !employeeName || !employeeSalary) {
-      setMessage("❗ Please fill in all fields.");
-      return;
-    }
+.form-title {
+  color: #2c3e50;
+  margin: 5px 0 15px 0; /* Reduced top margin */
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
 
-    try {
-      const response = await axios.post("https://employee-management-utosh.onrender.com/api/employees", {
-        employeeNo,
-        employeeName,
-        employeeSalary,
-      });
-      alert(response.data.message);
-    } catch (err) {
-     alert(err);
-    }
+.form-inputs {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-inputs input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-inputs input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: translateY(-1px);
+}
+
+.message-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+.message-card {
+  padding: 12px 15px;
+  background-color: #fff3f3;
+  border-left: 4px solid #e74c3c;
+  border-radius: 4px;
+  color: #e74c3c;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 5px 15px 15px 15px;
   }
-
   
+  .form-inputs {
+    padding: 1.2rem;
+  border-radius: 6px;
+  }
   
-
- return (
-  <div className="form-container">
-    <div >
-      <h1 className="form-title">🧾 Add Employee below </h1>
-    </div>
-    
-    <form className="form-inputs" onSubmit={addHandler}>
-      <input
-        type="text"
-        placeholder="👨‍💼 Employee No"
-        value={employeeNo}
-        onChange={(e) => setEmployeeNo(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="🧑 Employee Name"
-        value={employeeName}
-        onChange={(e) => setEmployeeName(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="💰 Employee Salary"
-        value={employeeSalary}
-        onChange={(e) => setEmployeeSalary(e.target.value)}
-      />
-
-      <button type="submit">🚀 Submit</button>
-    </form>
-
-    {message && (
-      <div className="message-container">
-        <div className="message-card">
-          <p>{message}</p>
-        </div>
-      </div>
-    )}
-  </div>
-);
+  .form-title {
+    font-size: 1.3rem;
+    margin: 5px 0 10px 0;
+  }
 }
