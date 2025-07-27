@@ -19,7 +19,7 @@ export function DeleteEmployee() {
     }
 
     try {
-      const response = await axios.delete(`http://localhost:3001/api/employees/${id}`);
+      const response = await axios.delete(`https://employee-management-utosh.onrender.com/api/employees/${id}`);
       alert("Employee deleted successfully");
        
       setMessage("");
