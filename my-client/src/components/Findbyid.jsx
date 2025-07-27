@@ -19,7 +19,7 @@ export function Findbyid() {
     }
 
           try {
-        const response = await axios.get(`http://localhost:3001/api/employees/${id}`);
+        const response = await axios.get(`https://employee-management-utosh.onrender.com/api/employees/${id}`);
         setEmployee(response.data);
         setMessage("");
       } catch (err) {
