@@ -18,7 +18,7 @@ export function Employee() {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/api/employees", {
+      const response = await axios.post("https://employee-management-utosh.onrender.com/api/employees", {
         employeeNo,
         employeeName,
         employeeSalary,
