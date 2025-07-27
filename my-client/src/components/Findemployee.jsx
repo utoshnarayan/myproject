@@ -17,7 +17,7 @@ export function Findemployee() {
 
     try {
 
-      const response = await axios.get("http://localhost:3001/api/employees");
+      const response = await axios.get("https://employee-management-utosh.onrender.com/api/employees");
       setEmployees(response.data);
      
      
